@@ -4,6 +4,7 @@ const loodPhone = async (search) => {
   );
   const data = await response.json();
   const phone = data.data;
+  console.log(phone)
   phoneLood(phone);
 };
 loodPhone();
@@ -40,11 +41,23 @@ const phoneLood = (phones) => {
     `;
     phoneContainer.appendChild(phoneCard)
   });
+  loddedData(false)
 };
 
 function searchFild(){
+  loddedData(true)
   const input = document.getElementById('inputFild');
   const inputText = input.value;
   loodPhone(inputText)
  
+}
+
+function loddedData(islodded){
+  const lood =document.getElementById('lodded')
+  if(islodded){
+    lood.classList.remove('hidden')
+  }
+  else{
+    lood.classList.add('hidden')
+  }
 }
