@@ -16,20 +16,44 @@
     <main class="container mx-auto">
       <section>
         <div class="bg-slate-400 p-4">
-          <input id="inputFild" type="text" placeholder="search" class="input input-bordered w-full max-w-xs" />
+          <input
+            id="inputFild"
+            type="text"
+            placeholder="search"
+            class="input input-bordered w-full max-w-xs"
+          />
           <button class="btn btn-accent" onclick="searchFild()">Search</button>
         </div>
       </section>
       <section>
-        <div id="lodded" class="text-center my-48 hidden">
-          <span class="loading loading-spinner loading-lg text-green-600 "></span>
+        <div id="lodded" class="text-center my-48 hidden text-">
+          <span
+            class="loading loading-spinner loading-lg text-green-600"
+          ></span>
         </div>
-        <div id="phone_container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-        </div>
-        <div class="button hidden" id="More_show">
-          <button class="btn btn-active btn-accent">Show More</button>
+        <div
+          id="phone_container"
+          class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4"
+        ></div>
+        <div class="button hidden text-center my-8" id="More_show">
+          <button onclick="showMore()" class="btn btn-active btn-accent">
+            Show More
+          </button>
         </div>
       </section>
+
+      <!-- SHOW DETAILS -->
+      <!-- Open the modal using ID.showModal() method -->
+      <dialog
+        id="phone_modal_details"
+        class="modal modal-bottom sm:modal-middle r"
+      >
+        <div id="details_container" class="modal-box  ">
+          
+          
+        </div>
+        <div id class=""></div>
+      </dialog>
     </main>
     <footer></footer>
 
