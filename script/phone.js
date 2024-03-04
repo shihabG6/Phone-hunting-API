@@ -92,7 +92,7 @@ const showModatDetails = (phone) => {
   <p><span class="font-medium mb-4">Slug : </span>${phone.slug}</p>
   <p><span class="font-medium mb-4">Release Date : </span>${phone.releaseDate}</p>
   <p><span class="font-medium mb-4">Brand : </span>${phone.brand}</p>
-  <p><span class="font-medium mb-4">GPS : </span>${phone.others.GPS}</p>
+  <p><span class="font-medium mb-4">GPS : </span>${phone?.others?.GPS || 'No GPS'}</p>
 
   <form method="dialog" class="mt-10 flex justify-end">
         <!-- if there is a button in form, it will close the modal -->
